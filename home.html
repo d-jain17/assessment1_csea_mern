@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <center><h4 style="color: rgb(103, 103, 210); font-size: larger;">Resume Builder</h4></center>
+    
+    <!-- Form Section -->
+    <div id="user_form">
+        <form>
+            <label for="name">Name : </label><br>
+            <input type="text" id="name" name="name"> <br><br>
+            <label for="email">Email : </label><br>
+            <input type="email" id="email" name="email"> <br><br>
+            <label for="phone_no">Phone number : </label><br>
+            <input type="number" id="phone_no" name="phone_no"> <br><br>
+            <label for="lprofile">LinkedIn Profile : </label><br>
+            <input type="url" id="lprofile" name="lprofile"> <br><br>
+            <label for="gprofile">Github Profile : </label><br>
+            <input type="url" id="gprofile" name="gprofile"> <br><br>
+            <label for="wExp">Work Experience : </label><br>
+            <input type="text" id="wExp" name="wExp"> <br><br>
+            <label for="ed">Education : </label><br>
+            <input type="text" id="ed" name="ed"> <br><br>
+            <label for="pic">Upload Photo : </label><br>
+            <input type="file" id="pic" name="pic" accept="image/*"> <br><br>
+            <button type="button" id="generate_btn" onclick="generateResume()">Generate resume</button>
+        </form>
+    </div>
+
+    <!-- Resume Display Section -->
+    <center>
+        <div id="resume">
+            <h2 style="color: rgb(103, 103, 210);" id="displayName"></h2>
+            <img src="" id="displayPic" alt="Profile Picture">
+            <p id="displayEmail">Email: </p>
+            <p id="displayPhone">Phone: </p>
+            <p id="displayLinkedin">LinkedIn: </p>
+            <p id="displayGithub">Github: </p>
+            <p id="displayExperience">Experience: </p>
+            <p id="displayEducation">Education: </p>
+            <button onclick="downloadResume()">Download PDF</button>
+        </div>
+    </center>
+
+    <script src="script.js"></script>
+</body>
+</html>
